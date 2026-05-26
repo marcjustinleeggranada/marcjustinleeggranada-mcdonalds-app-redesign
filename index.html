@@ -351,15 +351,8 @@
   }
   .splash-m-svg { width: 130px; height: auto; }
   .splash-headline {
-    font-size: 30px; 
-    font-weight: 900; 
-    color: #1A1A1A;
-    text-align: center; 
-    margin-bottom: 14px; 
-    line-height: 1.2;
-  }
-  .splash-headline span {
-    color: red;
+    font-size: 26px; font-weight: 900; color: #1A1A1A;
+    text-align: center; margin-bottom: 14px; line-height: 1.2;
   }
   .splash-sub {
     font-size: 13px; font-weight: 500; color: #666;
@@ -409,7 +402,7 @@
           <div class="splash-logo-wrap">
             <img src="mcdo-logo.png" alt="McDonald's Logo" style="height:230px;object-fit:contain;" />
           </div>
-          <div class="splash-headline">Good things <br><span>ahead<span><img src="splash-icon.png" alt="An Splash Icon" style="width: 28px;height:35px;"/></span></div>
+          <div class="splash-headline">Good things <br><span>ahead</span><img src="splash-icon.png" alt="An Splash Icon" style="width: 28px;height:35px;"/></div>
           <div class="splash-sub">Become a member to order and pay in the app, receive tasty deals and collect points on your purchase.</div>
         </div>
         <div class="splash-actions">
@@ -491,30 +484,85 @@
               <div class="menu-card-body"><div class="menu-card-name">Big Mac</div><div class="menu-card-cal">563 cal</div><div class="menu-card-price">$5.99</div></div>
               <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('big-mac')">+</button>
             </div>
+            <div class="menu-card" data-menu-id="qpc" data-category="burgers" onclick="openMenuSheet('qpc')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#FFF3C4,#FFE082)">🍔</div>
+              <div class="menu-card-body"><div class="menu-card-name">Quarter Pounder with Cheese</div><div class="menu-card-cal">530 cal</div><div class="menu-card-price">$6.49</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('qpc')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="cheeseburger" data-category="burgers" onclick="openMenuSheet('cheeseburger')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#FFF3C4,#FFE082)">🍔</div>
+              <div class="menu-card-body"><div class="menu-card-name">Cheeseburger</div><div class="menu-card-cal">300 cal</div><div class="menu-card-price">$2.49</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('cheeseburger')">+</button>
+            </div>
             <div class="menu-card" data-menu-id="mcchicken" data-category="chicken" onclick="openMenuSheet('mcchicken')">
               <div class="menu-card-img" style="background:linear-gradient(135deg,#FFCCBC,#FFAB91)">🍗</div>
               <div class="menu-card-body"><div class="menu-card-name">McChicken Burger</div><div class="menu-card-cal">400 cal</div><div class="menu-card-price">$4.49</div></div>
               <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('mcchicken')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="chicken-fillet" data-category="chicken" onclick="openMenuSheet('chicken-fillet')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#FFE0B2,#FFCC80)">🍗</div>
+              <div class="menu-card-body"><div class="menu-card-name">Chicken Fillet</div><div class="menu-card-cal">380 cal</div><div class="menu-card-price">$4.99</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('chicken-fillet')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="chicken-nuggets" data-category="chicken" onclick="openMenuSheet('chicken-nuggets')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#FFCC80,#FFA726)">🍗</div>
+              <div class="menu-card-body"><div class="menu-card-name">Chicken McNuggets</div><div class="menu-card-cal">420 cal</div><div class="menu-card-price">$5.49</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('chicken-nuggets')">+</button>
             </div>
             <div class="menu-card" data-menu-id="large-fries" data-category="sides" onclick="openMenuSheet('large-fries')">
               <div class="menu-card-img" style="background:linear-gradient(135deg,#FFF9C4,#FFF176)">🍟</div>
               <div class="menu-card-body"><div class="menu-card-name">Large Fries</div><div class="menu-card-cal">490 cal</div><div class="menu-card-price">$2.99</div></div>
               <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('large-fries')">+</button>
             </div>
+            <div class="menu-card" data-menu-id="twister-fries" data-category="sides" onclick="openMenuSheet('twister-fries')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#FFF9C4,#FFF176)">🍟</div>
+              <div class="menu-card-body"><div class="menu-card-name">Twister Fries</div><div class="menu-card-cal">420 cal</div><div class="menu-card-price">$3.49</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('twister-fries')">+</button>
+            </div>
             <div class="menu-card" data-menu-id="coca-cola" data-category="drinks" onclick="openMenuSheet('coca-cola')">
               <div class="menu-card-img" style="background:linear-gradient(135deg,#E1F5FE,#B3E5FC)">🥤</div>
               <div class="menu-card-body"><div class="menu-card-name">Coca-Cola Large</div><div class="menu-card-cal">210 cal</div><div class="menu-card-price">$1.99</div></div>
               <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('coca-cola')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="sprite-large" data-category="drinks" onclick="openMenuSheet('sprite-large')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9)">🥤</div>
+              <div class="menu-card-body"><div class="menu-card-name">Sprite Large</div><div class="menu-card-cal">190 cal</div><div class="menu-card-price">$1.99</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('sprite-large')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="diet-coke" data-category="drinks" onclick="openMenuSheet('diet-coke')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#E3F2FD,#90CAF9)">🥤</div>
+              <div class="menu-card-body"><div class="menu-card-name">Diet Coke Large</div><div class="menu-card-cal">0 cal</div><div class="menu-card-price">$1.99</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('diet-coke')">+</button>
             </div>
             <div class="menu-card" data-menu-id="latte" data-category="mccafe" onclick="openMenuSheet('latte')">
               <div class="menu-card-img" style="background:linear-gradient(135deg,#F3E5F5,#E1BEE7)">☕</div>
               <div class="menu-card-body"><div class="menu-card-name">McCafé Latte</div><div class="menu-card-cal">180 cal</div><div class="menu-card-price">$3.49</div></div>
               <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('latte')">+</button>
             </div>
+            <div class="menu-card" data-menu-id="iced-coffee" data-category="mccafe" onclick="openMenuSheet('iced-coffee')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#E3F2FD,#BBDEFB)">🧋</div>
+              <div class="menu-card-body"><div class="menu-card-name">McCafé Iced Coffee</div><div class="menu-card-cal">140 cal</div><div class="menu-card-price">$2.99</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('iced-coffee')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="mocha-frappe" data-category="mccafe" onclick="openMenuSheet('mocha-frappe')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#EFEBE9,#BCAAA4)">🥤</div>
+              <div class="menu-card-body"><div class="menu-card-name">Mocha Frappé</div><div class="menu-card-cal">490 cal</div><div class="menu-card-price">$3.99</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('mocha-frappe')">+</button>
+            </div>
             <div class="menu-card" data-menu-id="mcflurry" data-category="desserts" onclick="openMenuSheet('mcflurry')">
               <div class="menu-card-img" style="background:linear-gradient(135deg,#FAFAFA,#EEEEEE)">🍦</div>
               <div class="menu-card-body"><div class="menu-card-name">McFlurry Oreo</div><div class="menu-card-cal">510 cal</div><div class="menu-card-price">$3.99</div></div>
               <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('mcflurry')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="choco-sundae" data-category="desserts" onclick="openMenuSheet('choco-sundae')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#EFEBE9,#D7CCC8)">🍨</div>
+              <div class="menu-card-body"><div class="menu-card-name">Chocolate Sundae</div><div class="menu-card-cal">340 cal</div><div class="menu-card-price">$2.49</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('choco-sundae')">+</button>
+            </div>
+            <div class="menu-card" data-menu-id="apple-pie" data-category="desserts" onclick="openMenuSheet('apple-pie')">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#FFF8E1,#FFE082)">🥧</div>
+              <div class="menu-card-body"><div class="menu-card-name">Apple Pie</div><div class="menu-card-cal">240 cal</div><div class="menu-card-price">$1.49</div></div>
+              <button type="button" class="add-btn" onclick="event.stopPropagation();quickAddMenuItem('apple-pie')">+</button>
             </div>
           </div>
         </div>
@@ -589,6 +637,54 @@
               <button class="redeem-btn" onclick="openQR()">Redeem Now →</button>
             </div>
           </div>
+          <div class="deal-big-card" data-delivery="true" data-pickup="true">
+            <div class="deal-unavailable-overlay"><span class="deal-unavailable-text">Not available for Delivery</span></div>
+            <div class="deal-big-img" style="background:linear-gradient(135deg,#FFF3C4,#FFE082)">🍔<div class="save-badge">SAVE 20%</div></div>
+            <div class="deal-big-body">
+              <div class="deal-big-name">Quarter Pounder with Cheese</div>
+              <div class="deal-big-desc">App-exclusive deal on the iconic Quarter Pounder. Fresh beef, two slices of cheese, all the good stuff.</div>
+              <div class="deal-price-row"><span class="deal-price-original">$6.49</span><span class="deal-price-app">$5.19</span><span class="deal-price-save">You save $1.30</span></div>
+              <div class="deal-valid-row"><span class="valid-label">Valid for</span><span class="valid-icon">🛵 Delivery</span><span class="valid-icon">🏪 Pick Up</span></div>
+              <button class="redeem-btn" onclick="openQR()">Redeem Now →</button>
+            </div>
+          </div>
+
+          <div class="deal-big-card" data-delivery="true" data-pickup="true">
+            <div class="deal-unavailable-overlay"><span class="deal-unavailable-text">Not available for Delivery</span></div>
+            <div class="deal-big-img" style="background:linear-gradient(135deg,#FFFDE7,#FFF176)">🍔<div class="save-badge">SAVE 30%</div></div>
+            <div class="deal-big-body">
+              <div class="deal-big-name">Cheeseburger Deal</div>
+              <div class="deal-big-desc">Everyone's classic, now even cheaper. Grab a Cheeseburger at a limited-time app-only price.</div>
+              <div class="deal-price-row"><span class="deal-price-original">$2.49</span><span class="deal-price-app">$1.74</span><span class="deal-price-save">You save $0.75</span></div>
+              <div class="deal-valid-row"><span class="valid-label">Valid for</span><span class="valid-icon">🛵 Delivery</span><span class="valid-icon">🏪 Pick Up</span></div>
+              <button class="redeem-btn" onclick="openQR()">Redeem Now →</button>
+            </div>
+          </div>
+
+          <div class="deal-big-card" data-delivery="false" data-pickup="true">
+            <div class="deal-unavailable-overlay"><span class="deal-unavailable-text">Not available for Delivery</span></div>
+            <div class="deal-big-img" style="background:linear-gradient(135deg,#FFF9C4,#FFF176)">🍟<div class="save-badge">SAVE 25%</div></div>
+            <div class="deal-big-body">
+              <div class="deal-big-name">Twister Fries Deal</div>
+              <div class="deal-big-desc">Get your spiral fix for less. Crispy, seasoned Twister Fries at a pick-up exclusive price.</div>
+              <div class="deal-price-row"><span class="deal-price-original">$3.49</span><span class="deal-price-app">$2.62</span><span class="deal-price-save">You save $0.87</span></div>
+              <div class="deal-valid-row"><span class="valid-label">Valid for</span><span class="valid-icon">🏪 Pick Up</span></div>
+              <button class="redeem-btn" onclick="openQR()">Redeem Now →</button>
+            </div>
+          </div>
+
+          <div class="deal-big-card" data-delivery="true" data-pickup="true">
+            <div class="deal-unavailable-overlay"><span class="deal-unavailable-text">Not available for Delivery</span></div>
+            <div class="deal-big-img" style="background:linear-gradient(135deg,#FFCC80,#FFA726)">🍗<div class="save-badge">SAVE 15%</div></div>
+            <div class="deal-big-body">
+              <div class="deal-big-name">10-Piece McNuggets</div>
+              <div class="deal-big-desc">Ten golden, crispy Chicken McNuggets at a special app price. Don't forget to grab a dipping sauce!</div>
+              <div class="deal-price-row"><span class="deal-price-original">$5.49</span><span class="deal-price-app">$4.66</span><span class="deal-price-save">You save $0.83</span></div>
+              <div class="deal-valid-row"><span class="valid-label">Valid for</span><span class="valid-icon">🛵 Delivery</span><span class="valid-icon">🏪 Pick Up</span></div>
+              <button class="redeem-btn" onclick="openQR()">Redeem Now →</button>
+            </div>
+          </div>
+
           <div style="height:16px"></div>
         </div>
         <div class="bottom-nav">
@@ -766,6 +862,17 @@
     'coca-cola':    { emoji:'🥤', name:'Coca-Cola Large', cal:'210 cal', price:'$1.99', desc:'Ice-cold Coca-Cola served in a large cup. Refreshing with every sip.', allergens:[], nutrition:['0g Protein','58g Carbs','0g Fat'] },
     'latte':        { emoji:'☕', name:'McCafé Latte', cal:'180 cal', price:'$3.49', desc:'Rich espresso blended with steamed milk and a light layer of foam.', allergens:['Dairy'], nutrition:['9g Protein','18g Carbs','7g Fat'] },
     'mcflurry':     { emoji:'🍦', name:'McFlurry Oreo', cal:'510 cal', price:'$3.99', desc:'Creamy vanilla soft serve mixed with crushed Oreo cookie pieces.', allergens:['Gluten','Dairy','Soy'], nutrition:['12g Protein','64g Carbs','17g Fat'] },
+    'qpc':          { emoji:'🍔', name:'Quarter Pounder with Cheese', cal:'530 cal', price:'$6.49', desc:'A quarter pound of 100% fresh beef, topped with two slices of melty cheese, onions, pickles, mustard and ketchup.', allergens:['Gluten','Dairy','Sesame'], nutrition:['30g Protein','41g Carbs','26g Fat'] },
+    'iced-coffee':  { emoji:'🧋', name:'McCafé Iced Coffee', cal:'140 cal', price:'$2.99', desc:'A refreshing blend of bold McCafé coffee poured over ice, lightly sweetened and finished with cream. Available in regular or large.', allergens:['Dairy'], nutrition:['2g Protein','24g Carbs','4g Fat'] },
+    'chicken-fillet': { emoji:'🍗', name:'Chicken Fillet', cal:'380 cal', price:'$4.99', desc:'A crispy, golden-fried chicken fillet seasoned to perfection. Juicy on the inside, crunchy on the outside.', allergens:['Gluten','Eggs','Soy'], nutrition:['22g Protein','34g Carbs','18g Fat'] },
+    'twister-fries':  { emoji:'🍟', name:'Twister Fries', cal:'420 cal', price:'$3.49', desc:'Spiral-cut seasoned fries with a bold, spicy kick. Crispy, curly, and impossible to stop eating.', allergens:[], nutrition:['5g Protein','55g Carbs','20g Fat'] },
+    'sprite-large':   { emoji:'🥤', name:'Sprite Large', cal:'190 cal', price:'$1.99', desc:'Ice-cold Sprite served in a large cup. Crisp, clean lemon-lime flavor that hits different every time.', allergens:[], nutrition:['0g Protein','52g Carbs','0g Fat'] },
+    'choco-sundae':   { emoji:'🍨', name:'Chocolate Sundae', cal:'340 cal', price:'$2.49', desc:'Smooth vanilla soft serve drizzled generously with rich chocolate fudge sauce. A classic McD\'s dessert.', allergens:['Dairy','Soy'], nutrition:['7g Protein','52g Carbs','10g Fat'] },
+    'cheeseburger':   { emoji:'🍔', name:'Cheeseburger', cal:'300 cal', price:'$2.49', desc:'A classic beef patty topped with a slice of melty American cheese, pickles, onions, mustard and ketchup on a soft bun.', allergens:['Gluten','Dairy','Sesame'], nutrition:['15g Protein','33g Carbs','12g Fat'] },
+    'mocha-frappe':   { emoji:'🥤', name:'Mocha Frappé', cal:'490 cal', price:'$3.99', desc:'A rich, creamy blend of coffee, mocha sauce and ice, topped with whipped cream and a chocolate drizzle.', allergens:['Dairy'], nutrition:['8g Protein','66g Carbs','18g Fat'] },
+    'chicken-nuggets':{ emoji:'🍗', name:'Chicken McNuggets', cal:'420 cal', price:'$5.49', desc:'Ten tender, golden-fried chicken nuggets made with 100% white meat. Served with your choice of dipping sauce.', allergens:['Gluten','Eggs','Soy'], nutrition:['24g Protein','25g Carbs','24g Fat'] },
+    'diet-coke':      { emoji:'🥤', name:'Diet Coke Large', cal:'0 cal', price:'$1.99', desc:'All the refreshing Coca-Cola taste with zero calories. Served ice-cold in a large cup.', allergens:[], nutrition:['0g Protein','0g Carbs','0g Fat'] },
+    'apple-pie':      { emoji:'🥧', name:'Apple Pie', cal:'240 cal', price:'$1.49', desc:'Warm, flaky pastry filled with sweet cinnamon-spiced apple filling. A timeless McD\'s treat best enjoyed fresh.', allergens:['Gluten'], nutrition:['2g Protein','35g Carbs','11g Fat'] },
   };
 
   function switchTab(tab) {
